@@ -1,0 +1,269 @@
+@import "../variables/colors";
+@import "../variables/fonts";
+@import "../mixins/mixins";
+
+// Navbar
+#nav-wrapper {
+  padding: 2% 7%;
+  display: grid;
+  grid-template-columns: auto auto;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+
+  .nav-search {
+    align-self: center;
+    justify-self: end;
+
+    a {
+      color: $N-10;
+    }
+  }
+}
+
+// Intro section
+#header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.intro-details {
+  background: $N-50;
+  display: grid;
+  position: relative;
+
+  img {
+    justify-self: center;
+    align-self: center;
+    margin-left: 25%;
+  }
+}
+.intro-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  div {
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  //   &::before {
+  //     content: '';
+  //     // display: block;
+  //     // position: absolute;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: 10;
+  //     background: url(../img/black.png) no-repeat;
+  //     background-position: top;
+  //     transform: rotate(270deg);
+  //   }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $Y-50;
+    position: absolute;
+    opacity: 0.8;
+  }
+}
+
+// Main section
+#main {
+  height: 340vh;
+  background: $Y-10;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: url(../img/cream.png) no-repeat;
+    background-size: contain;
+    // transform: rotate(360deg);
+    top: -2.5%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/cream.png) no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+    bottom: -3%;
+  }
+}
+
+h3 {
+  @include setFont($poppins, 900, 24px);
+  line-height: 28px;
+}
+p {
+  @include setFont($poppins, 400, 14px);
+  line-height: 140%;
+  margin: 8px 0px;
+}
+a {
+  @include setFont($poppins, 700, 14px);
+  text-decoration: none;
+  color: $O-50;
+}
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  padding: 7% 10%;
+  position: absolute;
+  // align-self: center;
+  // justify-self: center;
+  // margin-left: 2%;
+
+  & > div {
+    // border: 1px solid red;
+    align-items: center;
+    // justify-content: center;
+  }
+
+  & > div > div {
+    justify-self: center;
+    align-self: center;
+    margin: 8px 0px;
+  }
+  .course-abm {
+    grid-area: 1 / 1 / 4 / 10;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .course-image {
+      justify-self: start;
+    }
+  }
+
+  .course-bse {
+    grid-area: 1 / 11 / 7 / 16;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: left;
+    .course-content {
+      align-self: end;
+      // justify-self: end;
+    }
+    .course-image {
+      justify-self: start;
+    }
+
+  }
+
+  .course-cmc {
+    grid-area: 5 / 1 / 8 / 10;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course-ps {
+    grid-area: 8 / 1 / 15 / 6;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    .course-content {
+      align-self: end;
+      padding: 2%;
+    }
+    .course-image {
+      align-self: start;
+      justify-self: start;
+    }
+  }
+
+  .course-cs {
+    grid-area: 8 / 7 / 11 / 16;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .course-image {
+      justify-self: end;
+    }
+  }
+
+  .course-ecs {
+    grid-area: 12 / 7 / 15 / 16;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .course-content {
+      justify-self: end;
+      padding-left: 9%;
+    }
+  }
+
+  .course-al {
+    grid-area: 15 / 1 / 18 / 10;
+    display: grid;
+    grid-template-columns: 5fr 9fr;
+  }
+
+  .course-tlc {
+    grid-area: 16 / 11 / 21 / 16;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    .course-content {
+      align-self: end;
+    }
+    .course-image {
+      align-self: start;
+    }
+  }
+}
+// Feedback section
+#feedback {
+  background: $O-50;
+  display: grid;
+  height: 60vh;
+  padding-top: 6%;
+
+  div {
+    justify-self: center;
+    position: relative;
+    display: grid;
+    img {
+      position: absolute;
+      bottom: 0%;
+      align-self: center;
+      justify-self: center;
+      z-index: 2;
+    }
+  }
+}
+
+.feedback-content {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  z-index: 30;
+  color: $N-10;
+  padding: 35% 0;
+
+  & > * {
+    grid-row-gap: 0;
+    margin: 0px;
+  }
+  h3 {
+    @include setFont($poppins, 900, 24px);
+    text-transform: uppercase;
+  }
+  p {
+    @include setFont($poppins, 400, 18px);
+  }
+  h4 {
+    @include setFont($poppins, 900, 18px);
+    text-transform: uppercase;
+    color: $Y-10;
+  }
+}

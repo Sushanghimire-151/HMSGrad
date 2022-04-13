@@ -1,0 +1,26 @@
+@import "../variables/fonts";
+@import "../mixins/mixins";
+
+#footer {
+  background: $N-50;
+  padding: 6% 7%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  color: $N-10;
+  @include setFont($poppins, 900, 14px);
+}
+
+.contact-details {
+  @include setFont($poppins, 400, 14px);
+  margin-top: 20px;
+
+  ul {
+    list-style-type: none;
+    line-height: 20px;
+  }
+}
+
+.address {
+    display: grid;
+    grid-template-columns: auto auto;
+}
