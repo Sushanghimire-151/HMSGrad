@@ -23,6 +23,7 @@
 
 // Intro section
 #header {
+  height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -31,45 +32,146 @@
   background: $N-50;
   display: grid;
   position: relative;
+  background: url("../img/home-logo1.png") black no-repeat;
+  background-position: 100% 50%;
+  align-items: end;
+  // justify-content: end;
 
-  img {
-    justify-self: center;
-    align-self: center;
-    margin-left: 25%;
+  // img {
+  //   justify-self: center;
+  //   align-self: center;
+  //   margin-left: 25%;
+  // }
+  .info {
+    margin-left: 35%;
+    margin-right: 13%;
+    margin-bottom: 12%;
+    color: $N-10;
+
+    h1 {
+      @include setFont($poppins, 900, 65px);
+      text-transform: uppercase;
+      line-height: 1em;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../img/ellipse.png) no-repeat;
+        // background-size: contain;
+        left: -40%;
+        top: 30%;
+      }
+    }
+
+    h2 {
+      @include setFont($poppins, 900, 47px);
+      text-transform: uppercase;
+      line-height: 0.8em;
+    }
+
+    p {
+      @include setFont($poppins, 400, 14px);
+      padding: 6% 0;
+    }
+
+    h4 {
+      @include setFont($poppins, 900, 18px);
+      text-transform: uppercase;
+      color: $O-50;
+    }
+    .E {
+      display: inline-block;
+      position: relative;
+      // right: 5px;
+      // left: 2px;
+      top: -0.2em;
+      width: 25px;
+      height: 12px;
+      background: $O-50;
+      margin: 1%;
+
+      &::before {
+        content: "";
+        top: -16.5px;
+        position: absolute;
+        width: 28px;
+        height: 12px;
+        background: $O-50;
+      }
+      &::after {
+        content: "";
+        top: 17px;
+        position: absolute;
+        width: 28px;
+        height: 12px;
+        background: $O-50;
+      }
+    }
+
+    .E2 {
+      display: inline-block;
+      position: relative;
+      // right: 5px;
+      // left: 2px;
+      top: -0.15em;
+      width: 19px;
+      height: 9px;
+      background: $O-50;
+      margin: 1%;
+
+      &::before {
+        content: "";
+        top: -13px;
+        position: absolute;
+        width: 22px;
+        height: 9px;
+        background: $O-50;
+      }
+      &::after {
+        content: "";
+        top: 13px;
+        position: absolute;
+        width: 22px;
+        height: 9px;
+        background: $O-50;
+      }
+    }
   }
 }
 .intro-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   position: relative;
-  div {
-    img {
-      height: 100%;
-      width: auto;
-    }
-  }
-
-  //   &::before {
-  //     content: '';
-  //     // display: block;
-  //     // position: absolute;
-  //     width: 100%;
-  //     height: 100%;
-  //     z-index: 10;
-  //     background: url(../img/black.png) no-repeat;
-  //     background-position: top;
-  //     transform: rotate(270deg);
-  //   }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: $Y-50;
+  img {
     position: absolute;
-    opacity: 0.8;
+    left: -16%;
+    object-fit: fill;
+    width: 116.1%;
+    height: 102%;
+    // width: auto;
   }
+  // left: -8%;
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // position: relative;
+  // div {
+  //   img {
+  //     height: 100%;
+  //     width: auto;
+  //   }
+  // }
+
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: $Y-50;
+  //   position: absolute;
+  //   opacity: 0.8;
+  // }
 }
 
 // Main section
@@ -160,7 +262,6 @@ a {
     .course-image {
       justify-self: start;
     }
-
   }
 
   .course-cmc {
