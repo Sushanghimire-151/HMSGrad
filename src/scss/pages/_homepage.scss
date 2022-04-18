@@ -144,6 +144,9 @@
 }
 .intro-images {
   position: relative;
+  .intro-image-responsive {
+    visibility: hidden;
+  }
   img {
     position: absolute;
     left: -16%;
@@ -324,36 +327,44 @@ a {
 // Feedback section
 #feedback {
   background: $O-50;
-  display: grid;
-  height: 60vh;
-  padding-top: 6%;
+  background: url("../img/Union.png") no-repeat $O-50;
+  background-position: center bottom;
+  position: static;
+  // display: grid;
+  // height: 60vh;
+  // padding-top: 6%;
 
   div {
-    justify-self: center;
-    position: relative;
-    display: grid;
-    img {
-      position: absolute;
-      bottom: 0%;
-      align-self: center;
-      justify-self: center;
-      z-index: 2;
-    }
+  // background: $-50;
+  // display: grid;
+  // position: relative;
+  // align-items: end;
+    // justify-self: center;
+    // position: relative;
+    // display: grid;
+    // img {
+    //   position: absolute;
+    //   bottom: 0%;
+    //   align-self: center;
+    //   justify-self: center;
+    //   z-index: 2;
+    // }
   }
 }
 
 .feedback-content {
   display: grid;
   justify-items: center;
-  align-items: center;
-  position: absolute;
-  z-index: 30;
+  // align-items: flex-end;
+  // position: absolute;
+  // z-index: 30;
   color: $N-10;
-  padding: 35% 0;
+  padding: 15% 0 8%;
+
 
   & > * {
     grid-row-gap: 0;
-    margin: 0px;
+    margin: 5px;
   }
   h3 {
     @include setFont($poppins, 900, 24px);

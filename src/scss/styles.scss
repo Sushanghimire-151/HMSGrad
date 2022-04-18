@@ -1,5 +1,7 @@
 @import 'pages/homepage';
 @import 'sections/footer';
+@import 'mixins/config';
+@import 'mixins/responsive';
 
 *{
     box-sizing: border-box;
