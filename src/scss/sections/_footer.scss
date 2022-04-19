@@ -1,9 +1,39 @@
 @import "../variables/fonts";
 @import "../mixins/mixins";
 
+.feedback-content {
+  display: grid;
+  justify-items: center;
+  // align-items: flex-end;
+  // position: absolute;
+  // z-index: 30;
+  color: $N-10;
+  padding: 15% 0 8%;
+
+
+  & > * {
+    grid-row-gap: 0;
+    margin: 5px;
+  }
+  h3 {
+    @include setFont($poppins, 900, 24px);
+    text-transform: uppercase;
+  }
+  p {
+    @include setFont($poppins, 400, 18px);
+  }
+  h4 {
+    @include setFont($poppins, 900, 18px);
+    text-transform: uppercase;
+    color: $Y-10;
+  }
+}
+
+//Footer
+
 #footer {
   background: $N-50;
-  padding: 10% 7%;
+  padding: 5% 7%;
   display: grid;
   grid-template-columns: 2fr 1fr 3fr;
   color: $N-10;

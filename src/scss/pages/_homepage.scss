@@ -83,6 +83,11 @@
       text-transform: uppercase;
       color: $O-50;
     }
+    a {
+      @include setFont($poppins, 700, 14px);
+      text-decoration: none;
+      color: $O-50;
+    }
     .E {
       display: inline-block;
       position: relative;
@@ -207,22 +212,23 @@
     transform: rotate(180deg);
     bottom: -3%;
   }
+  h3 {
+    @include setFont($poppins, 900, 24px);
+    line-height: 28px;
+  }
+  p {
+    @include setFont($poppins, 400, 14px);
+    line-height: 140%;
+    margin: 8px 0px;
+  }
+  a {
+    @include setFont($poppins, 700, 14px);
+    text-decoration: none;
+    color: $O-50;
+  }
 }
 
-h3 {
-  @include setFont($poppins, 900, 24px);
-  line-height: 28px;
-}
-p {
-  @include setFont($poppins, 400, 14px);
-  line-height: 140%;
-  margin: 8px 0px;
-}
-a {
-  @include setFont($poppins, 700, 14px);
-  text-decoration: none;
-  color: $O-50;
-}
+
 .main-wrapper {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -352,30 +358,3 @@ a {
   }
 }
 
-.feedback-content {
-  display: grid;
-  justify-items: center;
-  // align-items: flex-end;
-  // position: absolute;
-  // z-index: 30;
-  color: $N-10;
-  padding: 15% 0 8%;
-
-
-  & > * {
-    grid-row-gap: 0;
-    margin: 5px;
-  }
-  h3 {
-    @include setFont($poppins, 900, 24px);
-    text-transform: uppercase;
-  }
-  p {
-    @include setFont($poppins, 400, 18px);
-  }
-  h4 {
-    @include setFont($poppins, 900, 18px);
-    text-transform: uppercase;
-    color: $Y-10;
-  }
-}

@@ -1,0 +1,99 @@
+#courses {
+  background: $N-50;
+  .content {
+    padding: 10% 7% 5%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    // height: 100vh;
+  }
+  .sidebar {
+    padding: 6% 5% 6% 0%;
+    ul {
+      list-style-type: none;
+      li {
+        padding: 5% 0%;
+        margin: 3px 0px;
+        border-bottom: 1px solid $N-40;
+        position: relative;
+
+        &.active {
+          a {
+            font-weight: 700;
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: url(../img/active.png) no-repeat;
+            left: -8%;
+            top: 40%;
+          }
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $N-20;
+      @include setFont($poppins, 400, 14px);
+      transition: 0.5s;
+
+      &:hover {
+        @include setFont($poppins, 700, 14px);
+        color: $N-10;
+      }
+    }
+  }
+
+  .content-lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    // grid-row-gap: 3%;
+    .course-content {
+      padding-bottom: 8%;
+      p {
+        color: $N-10;
+        @include setFont($poppins, 700, 18px);
+      }
+    }
+
+    .pagination {
+      justify-self: start;
+      display: inline-block;
+
+      a {
+        color: $N-10;
+        @include setFont($poppins, 400, 14px);
+        float: left;
+        padding: 8px 15px;
+        text-decoration: none;
+        transition: 0.5s;
+
+        i {
+          color: $N-10;
+        }
+
+        &.active {
+          background-color: $O-50;
+          border-radius: 100%;
+        }
+        &:hover:not(.active) {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background: url(../img/courses-black.png) no-repeat;
+    background-size: contain;
+  }
+}
