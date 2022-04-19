@@ -1,0 +1,40 @@
+.al-detail{
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.9fr 0.9fr 1.6fr 2.3fr;
+    // justify-items: end;
+
+    h1 {
+        @include setFont($poppins, 900, 48px);
+        color: $Y-50;
+        padding-bottom: 3%;
+    }
+    p {
+        color: $N-10;
+        @include setFont($poppins, 400, 18px);
+        line-height: 200%;
+    }
+    .names {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // margin-top: 3%;
+    }
+    .al-videos {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        h4{
+            @include setFont($poppins, 700, 24px);
+            color: $N-10;
+            // margin-top: 2%;
+            padding-top: 20px;
+        }
+        & > div {
+            padding: 3% 0 5%;
+            cursor: pointer;
+        }
+        img {
+            @include course-image-transition;
+        }
+    }
+}

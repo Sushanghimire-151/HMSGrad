@@ -2,6 +2,9 @@
 @import 'sections/footer';
 @import 'responsive/responsive-homepage';
 @import 'pages/all-courses';
+@import 'pages/course-detail';
+@import 'pages/course-al';
+@import 'mixins/mixins';
 
 *{
     box-sizing: border-box;

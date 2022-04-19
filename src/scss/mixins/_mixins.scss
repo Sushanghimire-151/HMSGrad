@@ -4,3 +4,12 @@
     font-weight: $font-weight;
     font-size: $size;
 }
+
+@mixin course-image-transition
+{
+    transition: transform 0.8s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}

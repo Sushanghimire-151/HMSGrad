@@ -56,37 +56,15 @@
     // grid-row-gap: 3%;
     .course-content {
       padding-bottom: 8%;
+      @include course-image-transition;
+      a {text-decoration: none;}
       p {
         color: $N-10;
         @include setFont($poppins, 700, 18px);
       }
     }
 
-    .pagination {
-      justify-self: start;
-      display: inline-block;
-
-      a {
-        color: $N-10;
-        @include setFont($poppins, 400, 14px);
-        float: left;
-        padding: 8px 15px;
-        text-decoration: none;
-        transition: 0.5s;
-
-        i {
-          color: $N-10;
-        }
-
-        &.active {
-          background-color: $O-50;
-          border-radius: 100%;
-        }
-        &:hover:not(.active) {
-          font-weight: 600;
-        }
-      }
-    }
+    
   }
   &::after {
     content: "";
@@ -95,5 +73,31 @@
     height: 10%;
     background: url(../img/courses-black.png) no-repeat;
     background-size: contain;
+  }
+}
+
+.pagination {
+  justify-self: start;
+  display: inline-block;
+
+  a {
+    color: $N-10;
+    @include setFont($poppins, 400, 14px);
+    float: left;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: 0.5s;
+
+    i {
+      color: $N-10;
+    }
+
+    &.active {
+      background-color: $O-50;
+      border-radius: 100%;
+    }
+    &:hover:not(.active) {
+      font-weight: 600;
+    }
   }
 }
