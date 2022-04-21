@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses</title>
+    <script src="https://kit.fontawesome.com/fa1bf7696b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./scss/styles.scss">
+</head>
+
+<body>
+    <nav id="nav-wrapper">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="./img/hms-logo_white.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-search">
+            <a href="#">
+                <img src="./icons/Union.png" alt="Logo">
+            </a>
+        </div>
+    </nav>
+
+    <section id="details">
+        <div class="course-info">
+            <p>
+                <a href="all-courses.html">Home</a> /
+                <a href="course-ps.html">Psychology Studies</a> /
+            </p>
+            <h1>Money Matters</h1>
+            <p class="info">
+                A money skills programme (For clients diagnosed with Autism Spectrum Disorder)
+            </p>
+        </div>
+        <img src="./img/money-matters.png" id="course-img">
+        <div class="detail">
+            <div class="course-detail">
+                <p>The programme aimed to teach clients who have been diagnosed with autism to identify and count money,
+                    understand the concept of change, and purchase items. These clients were from the St Andrew Autism
+                    Centre (Day Activity Centre Seng Kang).</p>
+                <p>A total of four classroom tasks were designed, and clients were taught individually how to complete
+                    the tasks before attempting them on their own. They were praised for correct performance and
+                    corrected immediately via physical, verbal, or gestural prompts when they made a mistake. </p>
+                <p>Money Matters was concluded as a programme that effectively increased clients’ money skills, allowing
+                    them to purchase items from stores appropriately. Learning resources were also shared with the Day
+                    Activity Centre so that more clients can benefit from them.</p>
+                <p class="thumbnail">Click on the thumbnail below to enlarge the picture.</p>
+            </div>
+            <div class="user-detail">
+                <div class="img">
+                    <img src="./img/user1.png">
+                </div>
+                <div class="det">
+                    <p>Gwee Rong Xuan</p>
+                    <button id="profileBtn">
+                        View Profile
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                    <div id="myModal" class="userModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="content">
+                                <div class="picture">
+                                    <img src="./img/user1-enlarged.png">
+                                </div>
+                                <div class="description">
+                                    <h1>Gwee Rong Xuan</h1>
+                                    <p>Hello, I’m Gwee! I am money matters lead program coordinator and I led the
+                                        creative direction of the website and ensured the website’s user experience and
+                                        user interface were well-developed.I also oversaw the Music aspect of the
+                                        exhibition.</p>
+                                    <p>I am passionate about the arts and preserving our culture and heritage in
+                                        Southeast Asia.I want to play a part in preserving our rich customs and
+                                        traditions, and create a sustainable environment for heritage to thrive in
+                                        Singapore.
+                                    </p>
+                                    <p class="follow"><i class="fab fa-linkedin"></i>Follow <i
+                                            class="fas fa-angle-right"></i></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="images">
+            <div>
+                <img src="./img/money-image-1.png" onclick="openGallaryModal();currentSlide(1)">
+            </div>
+            <div>
+                <img src="./img/money-image-2.png" onclick="openGallaryModal();currentSlide(2)">
+            </div>
+            <div>
+                <img src="./img/money-image-3.png" onclick="openGallaryModal();currentSlide(3)">
+            </div>
+            <div>
+                <img src="./img/money-image-4.png" onclick="openGallaryModal();currentSlide(4)">
+            </div>
+        </div>
+
+        <div id="galleryModal" class="modal">
+            <span class="close cursor" onclick="closeGallaryModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 of 4</div>
+                    <img src="./img/money-image-1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 of 4</div>
+                    <img src="./img/money-image-2.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 of 4</div>
+                    <img src="./img/money-image-3.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 of 4</div>
+                    <img src="./img/money-image-4.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <div>
+            <!-- <img src="./img/Union.png" alt="Union image"> -->
+            <div class="feedback-content">
+                <h3>GOT ANY FEEDBACK?</h3>
+                <p>We’d really love to hear from you</p>
+                <h4>Send feedback <i class="fas fa-angle-right"></i></h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div>
+            <img src="./img/hms-logo_white.png" alt="Logo">
+        </div>
+        <div class="connect">
+            <div>
+                CONNECT
+            </div>
+            <div class="contact-details">
+                <ul>
+                    <li>Instagram</li>
+                    <li>Linkedin</li>
+                    <li>Email</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            ADDRESS
+            <div class="address">
+                <div class="contact-details">
+                    Blk 52, #04-01 <br>
+                    School of Humanities <br>
+                    & Social Sciences <br>
+                </div>
+                <div class="contact-details">
+                    Ngee Ann Polytechnic <br>
+                    535 Clementi Road, <br>
+                    Singapore, 599489 <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>

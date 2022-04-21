@@ -1,0 +1,150 @@
+#details {
+  .course-info {
+    background: $N-50;
+    padding: 12% 7% 5%;
+    p {
+      color: $N-10;
+      @include setFont($poppins, 700, 14px);
+      padding-right: 35%;
+      a {
+        text-decoration: none;
+        color: $N-10;
+        border-bottom: 2px solid $O-50;
+      }
+    }
+    h1 {
+      color: $Y-50;
+      @include setFont($poppins, 900, 48px);
+      margin-top: 3%;
+    }
+    .info {
+      @include setFont($poppins, 400, 18px);
+    }
+  }
+  #course-img {
+    width: 100%;
+    display: block;
+  }
+
+  // .survivor {
+  //   position: relative;
+  //   display: block;
+  //   &::after {
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     width: 100%;
+  //     height: 100%;
+  //     background: url(../img/cream.png) no-repeat;
+  //     background-size: contain;
+  //     transform: rotate(180deg);
+  //     bottom: -8%;
+  //   }
+  // }
+
+  .detail {
+    background: $Y-10;
+    padding: 7% 7% 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .course-detail {
+      p {
+        @include setFont($poppins, 400, 18px);
+        margin-bottom: 8%;
+      }
+      .thumbnail {
+        @include setFont($poppins, 700, 18px);
+      }
+      .image-container {
+        position: relative;
+          margin-bottom: 5%;
+        .image {
+          opacity: 1;
+          display: block;
+          transition: 0.5s ease;
+          backface-visibility: hidden;
+          width: 70%;
+          height: auto;
+        }
+        .middle {
+          transition: 0.5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 35%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          a {
+            text-decoration: none;
+          }
+          .text {
+            background-color: $N-50;
+            color: $N-10;
+            padding: 10px 20px;
+            @include setFont($poppins, 700, 14px);
+            border-radius: 26px;
+          }
+        }
+
+        &:hover .image {
+          opacity: 0.4;
+        }
+
+        &:hover .middle {
+          opacity: 1;
+        }
+      }
+    }
+    .user-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .img {
+        justify-self: end;
+      }
+      .det {
+        padding: 4% 5%;
+        #profileBtn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          @include setFont($poppins, 700, 14px);
+          color: $O-50;
+        }
+        p {
+          @include setFont($poppins, 700, 18px);
+        }
+        @include userModal;
+      }
+    }
+  }
+  @include gallaryModal;
+  .images {
+    padding: 0 7% 5%;
+    background-color: $Y-10;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 3%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      @include course-image-transition;
+      cursor: pointer;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(../img/cream.png) no-repeat;
+      background-size: contain;
+      transform: rotate(180deg);
+      bottom: -8%;
+      z-index: -1;
+    }
+  }
+}
