@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Courses</title>
+    <script src="https://kit.fontawesome.com/fa1bf7696b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./scss/styles.scss">
 </head>
 
@@ -34,7 +35,7 @@
                         <a href="course-abm.html">Arts Business Management</a>
                     </li>
                     <li class="active">
-                        <a href="course-ps.html">Psychology Studies</a>
+                        <a href="course-ps.html"><p id="active">Psychology Studies</p></a>
                     </li>
                     <li>
                         <a href="course-bse.html">Business & Social Enterprise</a>
@@ -53,8 +54,30 @@
                     </li>
                 </ul>
             </div>
+            <div class="sidebar-collapse">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()">
+                        <p class="active-page"><img src="./img/active.png"> &nbsp;
+                            <span id="active-class"></span>
+                        </p>
+                        <p class="down-arrow">
+                            <i class="fa fa-caret-down"></i>
+                        </p>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="all-courses.html">All</a>
+                        <a href="course-abm.html">Arts Business Management</a>
+                        <a href="course-ps.html">Psychology Studies</a>
+                        <a href="course-bse.html">Business & Social Enterprise</a>
+                        <a href="course-cs.html">Chinese Studies</a>
+                        <a href="course-ec.html">Early Childhood</a>
+                        <a href="course-tlc.html">The Living Community</a>
+                        <a href="course-al.html">Adult Learning</a>
+                    </div>
+                </div>
+            </div>
             <div class="course-detail">
-                <div>
+                <div class="ps">
                     <h1>Psychology studies</h1>
                     <img src="./img/banner-ps.png">
                     <button>Meet Our Graduates
@@ -136,6 +159,24 @@
             </div>
         </div>
     </section>
+    <script>
+        let activeClass = document.getElementById("active").innerHTML;
+        document.getElementById("active-class").innerHTML = activeClass;
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches(".dropbtn")) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains("show")) {
+                    myDropdown.classList.remove("show");
+                }
+            }
+        };
+
+    </script>
 </body>
 
 </html>

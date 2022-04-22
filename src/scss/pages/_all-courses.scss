@@ -46,6 +46,9 @@
       }
     }
   }
+  .sidebar-collapse {
+    display: none;
+  }
 
   .content-lists {
     display: grid;
@@ -57,14 +60,14 @@
     .course-content {
       padding-bottom: 8%;
       @include course-image-transition;
-      a {text-decoration: none;}
+      a {
+        text-decoration: none;
+      }
       p {
         color: $N-10;
         @include setFont($poppins, 700, 18px);
       }
     }
-
-    
   }
   &::after {
     content: "";

@@ -1,0 +1,76 @@
+@include media-sm {
+  .show {
+    display: block;
+  }
+  #courses {
+    .content {
+      grid-template-columns: 1fr;
+      .sidebar {
+        display: none;
+      }
+      .content-lists {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        .course-content {
+          img {
+            width: 100%;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .sidebar-collapse {
+        display: block;
+        // width: 90%;
+        // background: $N-10;
+        margin: 40px 0px;
+        // color: white;
+        // height: 40px;
+        overflow: hidden;
+        .dropdown {
+          .dropbtn {
+            @include setFont($poppins, 700, 14px);
+            width: 100%;
+            color: $N-50;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 16px;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            .down-arrow {
+              justify-self: end;
+            }
+            .active-page {
+                justify-self: start;
+            }
+          }
+          .dropdown-content {
+            width: 86%;
+            border-radius: 4px;
+            display: none;
+            position: absolute;
+            background-color: $N-10;
+            z-index: 1;
+            a {
+            @include setFont($poppins, 700, 14px);
+              float: none;
+              color: black;
+              padding: 10px 16px;
+              text-decoration: none;
+              display: block;
+              text-align: left;
+              &:hover {
+                color: blue;
+              }
+            }
+          }
+          .show {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
