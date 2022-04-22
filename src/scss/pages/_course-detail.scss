@@ -11,6 +11,16 @@
             color: $Y-50;
             padding-bottom: 3%;
         }
+        button {
+            margin-top: 20px;
+            padding: 16px 32px;
+            @include setFont($poppins, 700, 14px);
+            cursor: pointer;
+            border-radius: 26px;
+            color: $N-10;
+            background: $O-50;
+            border: none;
+        }
         p {
             color: $N-10;
             @include setFont($poppins, 400, 18px);
@@ -19,6 +29,7 @@
         }
 
         .list{
+            margin-top: 30px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;

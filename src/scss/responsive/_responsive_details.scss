@@ -1,0 +1,86 @@
+@include media-sm {
+  #details {
+    .course-info {
+      padding-top: 80px;
+      p {
+        padding-right: 0px;
+        margin-top: 20px;
+      }
+      h1 {
+        @include setFont($poppins, 900, 24px);
+        margin-top: 50px;
+      }
+      .info {
+        font-size: 14px;
+        padding-right: 50px ;
+      }
+    }
+    .thumbnail {
+      font-size: 14px;
+      padding: 0px 40px 20px;
+    }
+    .detail {
+        padding: 40px 40px 10px;
+      grid-template-rows: 5fr 1fr;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      .course-detail {
+          p {
+              font-size: 14px;
+          }
+      }
+      .user-detail {
+        justify-self: start;
+        grid-template-columns: 1fr 3fr;
+      }
+
+      .user-detail {
+        .det {
+          .userModal {
+            .modal-content {
+                padding: 40px;
+                width: 80%;
+              .content {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                grid-template-rows: 1fr 3fr;
+                .picture {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 50%;
+                    }
+                }
+                .description {
+                    padding-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .images {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      padding: 0px 40px 140px;
+    }
+    .modal {
+      .close {
+        font-size: 25px;
+        top: 70px;
+      }
+      .modal-content {
+        .prev {
+          left: -40px;
+        }
+        .next {
+          right: -40px;
+        }
+        .mySlides {
+          .numbertext {
+            bottom: -25px;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -136,6 +136,10 @@
   }
 
   #feedback {
+    &::before {
+      // transform: rotate(360deg);
+      top: -18px;
+    }
     background-size: 75%;
     .feedback-content {
       padding: 20% 0 15%;

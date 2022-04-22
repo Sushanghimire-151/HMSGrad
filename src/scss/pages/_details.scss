@@ -41,19 +41,21 @@
   //     bottom: -8%;
   //   }
   // }
-
+  .thumbnail {
+    @include setFont($poppins, 700, 18px);
+    padding-bottom: 20px;
+    background: $Y-10;
+    padding-left: 7%;
+  }
   .detail {
     background: $Y-10;
     padding: 7% 7% 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,minmax(0,1fr));
     .course-detail {
       p {
         @include setFont($poppins, 400, 18px);
         margin-bottom: 8%;
-      }
-      .thumbnail {
-        @include setFont($poppins, 700, 18px);
       }
       .image-container {
         position: relative;
@@ -119,7 +121,7 @@
   }
   @include gallaryModal;
   .images {
-    padding: 0 7% 5%;
+    padding: 0 7% 9%;
     background-color: $Y-10;
     position: relative;
     display: grid;
