@@ -31,10 +31,36 @@
         }
         & > div {
             padding: 3% 0 5%;
-            cursor: pointer;
         }
-        img {
-            @include course-image-transition;
-        }
+        .image-container {
+            position: relative;
+            .image {
+              opacity: 0.6;
+              display: block;
+              transition: 0.5s ease;
+              backface-visibility: hidden;
+              width: 100%;
+              height: auto;
+            }
+            .middle {
+              transition: 0.5s ease;
+              opacity: 0.8;
+              position: absolute;
+              top: 45%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              a {
+                text-decoration: none;
+              }
+            }
+            &:hover .image {
+              opacity: 0.4;
+            }
+    
+            &:hover .middle {
+              opacity: 1;
+            }
+          }
     }
 }

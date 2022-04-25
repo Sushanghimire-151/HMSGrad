@@ -12,13 +12,24 @@
       list-style-type: none;
       li {
         padding: 5% 0%;
-        margin: 3px 0px;
+        // margin: 3px 3px;
         border-bottom: 1px solid $N-40;
         position: relative;
+        transition: 0.5s;
+
+        &:hover:not(.active) {
+          background: $N-40;
+        }
+        a {
+          text-decoration: none;
+          color: $N-20;
+          @include setFont($poppins, 400, 14px);
+        }
 
         &.active {
           a {
             font-weight: 700;
+            color: $N-10;
           }
 
           &::before {
@@ -32,17 +43,6 @@
             top: 40%;
           }
         }
-      }
-    }
-    a {
-      text-decoration: none;
-      color: $N-20;
-      @include setFont($poppins, 400, 14px);
-      transition: 0.5s;
-
-      &:hover {
-        @include setFont($poppins, 700, 14px);
-        color: $N-10;
       }
     }
   }
