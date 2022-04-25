@@ -1,0 +1,42 @@
+@include media-sm{
+    #details {
+        .graduates-header {
+            padding: 0%;
+        }
+        .graduates-list {
+            padding: 7% 5%;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            & > div {
+                padding: 14px;
+                margin: 10px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .follow {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@include media-md {
+    #details {
+        .graduates-list {
+            padding: 7% 5%;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            & > div {
+                padding: 14px;
+                margin: 10px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .follow {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}

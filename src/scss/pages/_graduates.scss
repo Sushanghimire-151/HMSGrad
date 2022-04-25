@@ -15,6 +15,11 @@
             margin: 24px;
             text-align: center;
             border-radius: 12px;
+            transition: transform 0.5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
         p {
             @include setFont($poppins, 700, 18px);
