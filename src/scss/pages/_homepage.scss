@@ -32,7 +32,7 @@
   background: $N-50;
   display: grid;
   position: relative;
-  background: url("../img/home-logo1.png") black no-repeat;
+  background: url("../img/home-logo1.svg") black no-repeat;
   background-position: 100% 50%;
   align-items: end;
   // justify-content: end;
@@ -60,7 +60,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: url(../img/ellipse.png) no-repeat;
+        background: url(../img/ellipse.svg) no-repeat;
         // background-size: contain;
         left: -40%;
         top: 30%;
@@ -195,7 +195,7 @@
     z-index: 20;
     width: 100%;
     height: 100%;
-    background: url(../img/cream.png) no-repeat;
+    background: url(../img/cream.svg) no-repeat;
     background-size: contain;
     pointer-events: none;
     top: -2.5%;
@@ -207,7 +207,7 @@
   //   position: absolute;
   //   width: 100%;
   //   height: 100%;
-  //   background: url(../img/cream.png) no-repeat;
+  //   background: url(../img/cream.svg) no-repeat;
   //   background-size: contain;
   //   transform: rotate(180deg);
   //   bottom: -3%;
