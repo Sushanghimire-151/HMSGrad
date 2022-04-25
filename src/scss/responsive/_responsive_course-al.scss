@@ -1,0 +1,33 @@
+@include media-sm {
+  #courses {
+    .al-detail {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-template-rows: 1fr;
+      padding-left: 0;
+      .course-info {
+        img {
+          width: 100%;
+        }
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .names {
+        grid-template-columns: 1fr;
+      }
+      .al-videos {
+          h4 {
+              @include setFont($poppins,400, 18px);
+              padding-top: 0;
+          }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

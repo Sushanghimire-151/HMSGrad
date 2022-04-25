@@ -5,7 +5,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 5fr;
         padding-left: 0;
-        .abm, .ps {
+        .course-info {
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
           img {
@@ -17,6 +17,10 @@
         }
         p {
             font-size: 14px;
+        }
+        button {
+          padding: 8px 16px;
+          font-weight: 400;
         }
         .list {
             margin-top: 0;
