@@ -1,52 +1,53 @@
-#courses{
-    .course-detail{
-        display: grid;
-        padding-left: 10%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        // justify-items: end;
+#courses {
+  .course-detail {
+    display: grid;
+    padding-left: 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    // justify-items: end;
 
-        h1 {
-            @include setFont($poppins, 900, 48px);
-            color: $Y-50;
-            padding-bottom: 3%;
-        }
-        button {
-            margin-top: 20px;
-            padding: 16px 32px;
-            @include setFont($poppins, 700, 14px);
-            cursor: pointer;
-            border-radius: 26px;
-            color: $N-10;
-            background: $O-50;
-            border: none;
+    h1 {
+      @include setFont($poppins, 900, 48px);
+      color: $Y-50;
+      padding-bottom: 3%;
+    }
+    .grad-button {
+      margin-top: 20px;
+      padding: 16px 32px;
+      @include setFont($poppins, 700, 14px);
+      cursor: pointer;
+      border-radius: 26px;
+      color: $N-10;
+      background: $O-50;
+      border: none;
+      text-decoration: none;
+    }
+    p {
+      color: $N-10;
+      @include setFont($poppins, 400, 18px);
+      line-height: 140%;
+      padding-top: 3%;
+    }
+
+    .list {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 3%;
+      // padding-top: 6%;
+
+      & > div {
+        margin-bottom: 12%;
+        @include course-image-transition;
+        a {
+          text-decoration: none;
         }
         p {
-            color: $N-10;
-            @include setFont($poppins, 400, 18px);
-            line-height: 140%;
-            padding-top: 3%;
+          font-weight: 700;
+          padding-top: 0px;
         }
-
-        .list{
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-column-gap: 3%;
-            // padding-top: 6%;
-
-            & > div {
-                margin-bottom: 12%;
-                @include course-image-transition;
-                a {
-                    text-decoration: none;
-                }
-                p {
-                    font-weight: 700;
-                    padding-top: 0px;
-                }
-            }
-        }
+      }
     }
+  }
 }

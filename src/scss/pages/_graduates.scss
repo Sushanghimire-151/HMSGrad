@@ -1,0 +1,32 @@
+#details {
+    .graduates-header {
+        padding: 0% 20%;
+        text-align: center;
+    }
+    .graduates-list {
+        background: $Y-10;
+        padding: 12% 5% 5%;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        & > div {
+            background: $N-10;
+            padding: 24px;
+            margin: 24px;
+            text-align: center;
+            border-radius: 12px;
+        }
+        p {
+            @include setFont($poppins, 700, 18px);
+            margin: 12px 0px;
+        }
+        .follow {
+            color: $B-50;
+            margin: 0px 8px;
+            @include setFont($poppins, 700, 14px);
+            i {
+                padding-right: 4%;
+            }
+        }
+    }
+}
